@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ItsIllusion - Roblox Developer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND PARTICLES -->
+    <div id="bg-particles"></div>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="nav-logo"><span>Its</span>Illusion</div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#systems">Systems</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+
+                <button id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="section hero fade-in">
+        <div class="container hero-content">
+            <h1><span>Its</span>Illusion</h1>
+            <p class="hero-role">Roblox Systems Developer – Tweening & Smooth Gameplay</p>
+
+            <p class="hero-text">
+                I specialize in tweening, transitions, and polished game-feel.  
+                I build clean, optimized systems like combat frameworks, camera rigs, 
+                and driving physics.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#systems" class="btn primary">View My Systems</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section fade-in">
+        <div class="container">
+            <h2>Who’s ItsIllusion?</h2>
+
+            <p class="section-text">
+                I'm a 14-year-old Roblox developer focused on polished gameplay, smooth tweening, 
+                clean transitions, and responsive interactions.  
+            </p>
+
+            <div class="info-grid">
+                <div class="info-card fade-in">
+                    <h3>Experience</h3>
+                    <p>Years of Roblox scripting across multiple genres.</p>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3>Tweening</h3>
+                    <p>Transitions, easing, buttons, menus, responsiveness.</p>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3>Systems</h3>
+                    <p>Combat, camera systems, chassis, tools, data.</p>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3>Performance</h3>
+                    <p>Clean, optimized, scalable architecture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED SYSTEMS -->
+   <section id="systems" class="section fade-in">
+        <div class="container">
+            <h2>Featured Systems</h2>
+
+            <p class="section-text">
+                High-quality systems focused on smooth tweening, transitions, and responsive game-feel.
+            </p>
+
+            <div class="carousel-container">
+
+                <!-- Left Arrow -->
+                <button class="carousel-btn left-btn">‹</button>
+
+                <!-- Carousel Track -->
+                <div class="carousel-track">
+
+                    <div class="carousel-item">
+                        <video src="Videos/combat.mp4" autoplay loop muted playsinline></video>
+                        <h3>Combat + Movement System</h3>
+                        <p>Anime-style combat with movement tech and smooth tween transitions.</p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <video src="Videos/camera.mp4" autoplay loop muted playsinline></video>
+                        <h3>Advanced RPG Camera System</h3>
+                        <p>Smooth tracking, stabilization, and angle tweening.</p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <video src="Videos/drift.mp4" autoplay loop muted playsinline></video>
+                        <h3>A-Chassis Drift System</h3>
+                        <p>Custom drift physics, tuning, and polished handling.</p>
+                    </div>
+
+                    <div class="carousel-item">
+                        <video src="Videos/menu.mp4" autoplay loop muted playsinline></video>
+                        <h3>Main Menu Tween System</h3>
+                        <p>Satisfying UI animations with easing.</p>
+                    </div>
+
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="carousel-btn right-btn">›</button>
+
+            </div>
+        </div>
+    </section>
+
+   <section id="games" class="section fade-in">
+        <div class="container">
+            <h2>Published Games</h2>
+            <p class="section-text">Games I’ve developed and released on Roblox.</p>
+
+            <div class="games-grid">
+
+                <!-- Platform Wars -->
+                <div class="game-card tilt" data-universe="9098749761">
+                    <div class="game-border"></div>
+                    <img src="images/platform-wars.jpg" class="game-thumb">
+
+                    <h3>Platform Wars</h3>
+                    <p>A fast-paced competitive platform battle game.</p>
+
+                    <div class="game-stats">
+                        <div class="stat">
+                            <span class="visits">Loading...</span> Visits
+                        </div>
+
+                        <div class="ratio-text">Loading...</div>
+
+                        <div class="likebar">
+                            <div class="like-fill"></div>
+                        </div>
+                    </div>
+
+                    <a class="btn play-btn" 
+                    href="https://www.roblox.com/games/113272076929502/Platform-Wars" 
+                    target="_blank">Play on Roblox</a>
+                </div>
+
+                <!-- Brainrot -->
+                <div class="game-card tilt" data-universe="8926430827">
+                    <div class="game-border"></div>
+                    <img src="images/brainrot.jpg" class="game-thumb">
+
+                    <h3>Don't Get Crushed By a Giant Brainrot</h3>
+                    <p>A chaotic survival challenge with a massive brainrot.</p>
+
+                    <div class="game-stats">
+                        <div class="stat">
+                            <span class="visits">Loading...</span> Visits
+                        </div>
+
+                        <div class="ratio-text">Loading...</div>
+
+                        <div class="likebar">
+                            <div class="like-fill"></div>
+                        </div>
+                    </div>
+
+                    <a class="btn play-btn" 
+                    href="https://www.roblox.com/games/105565428168270/Dont-Get-Crushed-By-a-Giant-Brainrot" 
+                    target="_blank">Play on Roblox</a>
+                </div>
+
+                <!-- Ultimate Derby Battlegrounds -->
+                <div class="game-card tilt" data-universe="5330883734">
+                    <div class="game-border"></div>
+                    <img src="images/ultimate-derby-battlegrounds.jpg" class="game-thumb">
+
+                    <h3>Ultimate Derby Battlegrounds</h3>
+                    <p>Vehicle combat with drift physics and destruction.</p>
+
+                    <div class="game-stats">
+                        <div class="stat">
+                            <span class="visits">Loading...</span> Visits
+                        </div>
+
+                        <div class="ratio-text">Loading...</div>
+
+                        <div class="likebar">
+                            <div class="like-fill"></div>
+                        </div>
+                    </div>
+
+                    <a class="btn play-btn" 
+                    href="https://www.roblox.com/games/15449991710/Ultimate-Derby-Battlegrounds" 
+                    target="_blank">Play on Roblox</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section fade-in">
+        <div class="container">
+            <h2>Pricing</h2>
+
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3>Small</h3>
+                    <p class="price">$10 – $30</p>
+                    <ul>
+                        <li>Small scripts</li>
+                        <li>Tween fixes</li>
+                        <li>Bug repairs</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card fade-in">
+                    <h3>Medium</h3>
+                    <p class="price">$40 – $80</p>
+                    <ul>
+                        <li>Smoothing & transitions</li>
+                        <li>Gameplay polish</li>
+                        <li>Feature systems</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card fade-in">
+                    <h3>Large</h3>
+                    <p class="price">$100+</p>
+                    <ul>
+                        <li>Full system builds</li>
+                        <li>Framework setup</li>
+                        <li>Ongoing scripting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section fade-in">
+        <div class="container">
+            <h2>Reviews</h2>
+
+            <div class="reviews-grid">
+
+                <div class="review-card fade-in">
+                    <h3>Client</h3>
+                    <p>“Super smooth tweening, clean transitions, very polished.”</p>
+                </div>
+
+                <div class="review-card fade-in">
+                    <h3>Client</h3>
+                    <p>“Made my systems feel way more responsive.”</p>
+                </div>
+
+                <div class="review-card fade-in">
+                    <h3>Client</h3>
+                    <p>“Fast, clean, and really good at polish.”</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section fade-in">
+        <div class="container">
+            <h2>Contact Me</h2>
+
+            <p class="contact-line">
+                Discord: <span>itsillusion1123</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 ItsIllusion — All Rights Reserved</p>
+
+        <div class="footer-socials">
+            <a href="#">Discord</a>
+            <a href="#">Roblox</a>
+            <a href="#">YouTube</a>
+        </div>
+    </footer>
+
+    <div id="videoModal" class="video-modal">
+    <div class="video-modal-inner">
+        <video id="expandedVideo" autoplay controls></video>
+
+        <!-- Caption Overlay -->
+        <div class="video-caption-bar">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+        </div>
+
+        <!-- Modal Navigation -->
+        <button class="modal-arrow modal-prev">‹</button>
+        <button class="modal-arrow modal-next">›</button>
+    </div>
+</div>
+
+    <script src="js/main.js"></script>
+</div>
+</body>
+</html>
