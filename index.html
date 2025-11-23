@@ -33,7 +33,7 @@
                 <a href="#about">About</a>
                 <a href="#systems">Systems</a>
                 <a href="#pricing">Pricing</a>
-                <a href="#reviews">Reviews</a>
+                <!-- <a href="#reviews">Reviews</a> -->
                 <a href="#contact">Contact</a>
 
                 <button id="themeToggle">🌙</button>
@@ -61,88 +61,131 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section fade-in">
-        <div class="container">
-            <h2>Who’s ItsIllusion?</h2>
-
-            <p class="section-text">
-                I'm a 14-year-old Roblox developer focused on polished gameplay, smooth tweening, 
-                clean transitions, and responsive interactions.  
+    <section id="about-illusion" class="section fade-in">
+        <div class="about-header">
+            <h2 class="about-title">Who’s ItsIllusion?</h2>
+            <p class="about-subtext">
+                I'm a 14-year-old Roblox developer focused on polished gameplay, smooth tweening,
+                clean transitions, and responsive interactions.
             </p>
+        </div>
 
-            <div class="info-grid">
-                <div class="info-card fade-in">
-                    <h3>Experience</h3>
-                    <p>Years of Roblox scripting across multiple genres.</p>
-                </div>
+        <span class="floating-dot" style="top: 20px; left: 10%;"></span>
+        <span class="floating-dot" style="top: 60px; right: 15%;"></span>
+        <span class="floating-dot" style="top: 180px; left: 30%;"></span>
 
-                <div class="info-card fade-in">
-                    <h3>Tweening</h3>
-                    <p>Transitions, easing, buttons, menus, responsiveness.</p>
-                </div>
+        <div class="about-cards">
 
-                <div class="info-card fade-in">
-                    <h3>Systems</h3>
-                    <p>Combat, camera systems, chassis, tools, data.</p>
-                </div>
-
-                <div class="info-card fade-in">
-                    <h3>Performance</h3>
-                    <p>Clean, optimized, scalable architecture.</p>
-                </div>
+            <div class="about-card tilt">
+                <div class="about-icon">⚡</div>
+                <h3>Experience</h3>
+                <p>Years of Roblox scripting across multiple genres.</p>
             </div>
+
+            <div class="about-card tilt">
+                <div class="about-icon">🎨</div>
+                <h3>Tweening</h3>
+                <p>Transitions, easing, buttons, menus, responsiveness.</p>
+            </div>
+
+            <div class="about-card tilt">
+                <div class="about-icon">🛠️</div>
+                <h3>Systems</h3>
+                <p>Combat, camera systems, chassis, tools, data.</p>
+            </div>
+
+            <div class="about-card tilt">
+                <div class="about-icon">🚀</div>
+                <h3>Performance</h3>
+                <p>Clean, optimized, scalable architecture.</p>
+            </div>
+
         </div>
     </section>
+
 
     <!-- FEATURED SYSTEMS -->
    <section id="systems" class="section fade-in">
-        <div class="container">
-            <h2>Featured Systems</h2>
+    <div class="container">
+        <h2>Featured Systems</h2>
 
-            <p class="section-text">
-                High-quality systems focused on smooth tweening, transitions, and responsive game-feel.
-            </p>
+        <p class="section-text">
+            High-quality systems focused on smooth tweening, transitions, and responsive game-feel.
+        </p>
 
-            <div class="carousel-container">
+        <div class="carousel-container">
 
-                <!-- Left Arrow -->
-                <button class="carousel-btn left-btn">‹</button>
+            <!-- Left Arrow -->
+            <button class="carousel-btn left-btn">‹</button>
 
-                <!-- Carousel Track -->
-                <div class="carousel-track">
+            <!-- Carousel Track -->
+            <div class="carousel-track">
 
-                    <div class="carousel-item">
-                        <video src="Videos/combat.mp4" autoplay loop muted playsinline></video>
-                        <h3>Combat + Movement System</h3>
-                        <p>Anime-style combat with movement tech and smooth tween transitions.</p>
+                <!-- COMBAT SYSTEM -->
+                <div class="carousel-item terminal-system">
+                    <div class="terminal-bar small-terminal">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">combat.sys</span>
                     </div>
 
-                    <div class="carousel-item">
-                        <video src="Videos/camera.mp4" autoplay loop muted playsinline></video>
-                        <h3>Advanced RPG Camera System</h3>
-                        <p>Smooth tracking, stabilization, and angle tweening.</p>
-                    </div>
-
-                    <div class="carousel-item">
-                        <video src="Videos/drift.mp4" autoplay loop muted playsinline></video>
-                        <h3>A-Chassis Drift System</h3>
-                        <p>Custom drift physics, tuning, and polished handling.</p>
-                    </div>
-
-                    <div class="carousel-item">
-                        <video src="Videos/menu.mp4" autoplay loop muted playsinline></video>
-                        <h3>Main Menu Tween System</h3>
-                        <p>Satisfying UI animations with easing.</p>
-                    </div>
-
+                    <video src="Videos/combat.mp4" autoplay loop muted playsinline></video>
+                    <h3>Combat + Movement System</h3>
+                    <p>Anime-style combat with movement tech and smooth tween transitions.</p>
                 </div>
 
-                <!-- Right Arrow -->
-                <button class="carousel-btn right-btn">›</button>
+                <!-- CAMERA SYSTEM -->
+                <div class="carousel-item terminal-system">
+                    <div class="terminal-bar small-terminal">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">camera.sys</span>
+                    </div>
+
+                    <video src="Videos/camera.mp4" autoplay loop muted playsinline></video>
+                    <h3>Advanced RPG Camera System</h3>
+                    <p>Smooth tracking, stabilization, and angle tweening.</p>
+                </div>
+
+                <!-- DRIFT SYSTEM -->
+                <div class="carousel-item terminal-system">
+                    <div class="terminal-bar small-terminal">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">drift.sys</span>
+                    </div>
+
+                    <video src="Videos/drift.mp4" autoplay loop muted playsinline></video>
+                    <h3>A-Chassis Drift System</h3>
+                    <p>Custom drift physics, tuning, and polished handling.</p>
+                </div>
+
+                <!-- MENU SYSTEM -->
+                <div class="carousel-item terminal-system">
+                    <div class="terminal-bar small-terminal">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="terminal-title">menu.sys</span>
+                    </div>
+
+                    <video src="Videos/menu.mp4" autoplay loop muted playsinline></video>
+                    <h3>Main Menu Tween System</h3>
+                    <p>Satisfying UI animations with polished easing.</p>
+                </div>
 
             </div>
+
+            <!-- Right Arrow -->
+            <button class="carousel-btn right-btn">›</button>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
   <section id="games" class="section fade-in">
         <div class="container">
@@ -152,42 +195,54 @@
             <div class="games-grid">
 
                 <!-- Platform Wars -->
-                <div class="game-card tilt">
-                    <div class="game-border"></div>
-                    <img src="images/platform-wars.jpg" class="game-thumb">
+                <div class="game-card terminal-game">
+                    <div class="terminal-bar">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                        <span class="terminal-title">published-game.sys</span>
+                    </div>
+
+                    <div class="game-thumb-frame">
+                        <img src="Images/platform-wars.jpg" class="game-thumb">
+                    </div>
 
                     <h3>Platform Wars</h3>
-                    <p>A fast-paced competitive platform battle game.</p>
-
-                    <a class="btn play-btn" 
-                    href="https://www.roblox.com/games/113272076929502/Platform-Wars" 
-                    target="_blank">Play on Roblox</a>
+                    <a href="https://www.roblox.com/games/113272076929502/Platform-Wars" target="_blank" class="play-btn">Play Now</a>
                 </div>
 
                 <!-- Brainrot -->
-                <div class="game-card tilt">
-                    <div class="game-border"></div>
-                    <img src="images/brainrot.jpg" class="game-thumb">
+                <div class="game-card terminal-game">
+                    <div class="terminal-bar">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                        <span class="terminal-title">published-game.sys</span>
+                    </div>
+
+                    <div class="game-thumb-frame">
+                        <img src="Images/brainrot.jpg" class="game-thumb">
+                    </div>
 
                     <h3>Don't Get Crushed By a Giant Brainrot</h3>
-                    <p>A chaotic survival challenge with a massive brainrot.</p>
-
-                    <a class="btn play-btn" 
-                    href="https://www.roblox.com/games/105565428168270/Dont-Get-Crushed-By-a-Giant-Brainrot" 
-                    target="_blank">Play on Roblox</a>
+                    <a href="https://www.roblox.com/games/105565428168270/Dont-Get-Crushed-By-a-Giant-Brainrot" target="_blank" class="play-btn">Play Now</a>
                 </div>
 
-                <!-- Ultimate Derby Battlegrounds -->
-                <div class="game-card tilt">
-                    <div class="game-border"></div>
-                    <img src="images/ultimate-derby-battlegrounds.jpg" class="game-thumb">
+                <!-- Derby -->
+                <div class="game-card terminal-game">
+                    <div class="terminal-bar">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                        <span class="terminal-title">published-game.sys</span>
+                    </div>
+
+                    <div class="game-thumb-frame">
+                        <img src="Images/ultimate-derby-battlegrounds.jpg" class="game-thumb">
+                    </div>
 
                     <h3>Ultimate Derby Battlegrounds</h3>
-                    <p>Vehicle combat with drift physics and destruction.</p>
-
-                    <a class="btn play-btn" 
-                    href="https://www.roblox.com/games/15449991710/Ultimate-Derby-Battlegrounds" 
-                    target="_blank">Play on Roblox</a>
+                    <a href="https://www.roblox.com/games/15449991710/Ultimate-Derby-Battlegrounds" target="_blank" class="play-btn">Play Now</a>
                 </div>
 
             </div>
@@ -197,79 +252,212 @@
 
     <!-- PRICING -->
     <section id="pricing" class="section fade-in">
-        <div class="container">
-            <h2>Pricing</h2>
+        <h2>Pricing</h2>
+        <p class="section-text">Transparent and fair pricing for high-quality scripting work.</p>
 
-            <div class="pricing-grid">
-                <div class="pricing-card fade-in">
-                    <h3>Small</h3>
-                    <p class="price">$10 – $30</p>
-                    <ul>
-                        <li>Small scripts</li>
-                        <li>Tween fixes</li>
-                        <li>Bug repairs</li>
-                    </ul>
+        <div class="pricing-terminal-grid">
+
+            <!-- ========================= STARTER ========================= -->
+            <div class="pricing-terminal">
+                <div class="terminal-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">starter-plan.sys</span>
                 </div>
 
-                <div class="pricing-card fade-in">
-                    <h3>Medium</h3>
-                    <p class="price">$40 – $80</p>
-                    <ul>
-                        <li>Smoothing & transitions</li>
-                        <li>Gameplay polish</li>
-                        <li>Feature systems</li>
-                    </ul>
-                </div>
+                <div class="terminal-content">
 
-                <div class="pricing-card fade-in">
-                    <h3>Large</h3>
-                    <p class="price">$100+</p>
-                    <ul>
-                        <li>Full system builds</li>
-                        <li>Framework setup</li>
-                        <li>Ongoing scripting</li>
+                    <h3 class="plan-title">Starter</h3>
+                    <div class="plan-price">$10–15</div>
+
+                    <div class="terminal-sep"></div>
+
+                    <p class="plan-desc">Best for small tweaks, fixes, and lightweight features.</p>
+
+                    <ul class="plan-list">
+                        <li>Simple scripts</li>
+                        <li>Small UI animations</li>
+                        <li>Basic optimization</li>
+                        <li>Quick delivery</li>
                     </ul>
+
+                    <!-- Particle lights -->
+                    <span class="particle" style="top: 20px; left: 18px;"></span>
+                    <span class="particle" style="top: 120px; right: 25px;"></span>
+                    <span class="particle" style="bottom: 20px; left: 50%;"></span>
                 </div>
             </div>
+
+
+            <!-- ========================= STANDARD ========================= -->
+            <div class="pricing-terminal highlighted">
+                <div class="terminal-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">standard-plan.sys</span>
+                </div>
+
+                <div class="terminal-content">
+
+                    <div class="featured-badge">MOST POPULAR</div>
+
+                    <h3 class="plan-title">Standard</h3>
+                    <div class="plan-price">$20–30</div>
+
+                    <div class="terminal-sep"></div>
+
+                    <p class="plan-desc">Perfect for medium-sized gameplay systems with polish.</p>
+
+                    <ul class="plan-list">
+                        <li>Smooth UI transitions</li>
+                        <li>Camera systems</li>
+                        <li>Movement additions</li>
+                        <li>Medium-scope scripting</li>
+                    </ul>
+
+                    <!-- Particle lights -->
+                    <span class="particle" style="top: 20px; left: 18px;"></span>
+                    <span class="particle" style="top: 120px; right: 25px;"></span>
+                    <span class="particle" style="bottom: 20px; left: 50%;"></span>
+                </div>
+            </div>
+
+
+            <!-- ========================= PREMIUM ========================= -->
+            <div class="pricing-terminal">
+                <div class="terminal-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">premium-plan.sys</span>
+                </div>
+
+                <div class="terminal-content">
+
+                    <h3 class="plan-title">Premium</h3>
+                    <div class="plan-price">$35–50+</div>
+
+                    <div class="terminal-sep"></div>
+
+                    <p class="plan-desc">Full gameplay systems and advanced mechanics.</p>
+
+                    <ul class="plan-list">
+                        <li>Combat systems</li>
+                        <li>A-Chassis tuning</li>
+                        <li>Advanced menus</li>
+                        <li>High-end responsiveness</li>
+                    </ul>
+
+                    <!-- Particle lights -->
+                    <span class="particle" style="top: 20px; left: 18px;"></span>
+                    <span class="particle" style="top: 120px; right: 25px;"></span>
+                    <span class="particle" style="bottom: 20px; left: 50%;"></span>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- REVIEWS -->
-    <section id="reviews" class="section fade-in">
-        <div class="container">
-            <h2>Reviews</h2>
+    <!-- <section id="reviews" class="section fade-in">
+        <h2>Client Reviews</h2>
 
-            <div class="reviews-grid">
+    <div class="review-carousel">
+        <div class="review-track">
 
-                <div class="review-card fade-in">
-                    <h3>Client</h3>
-                    <p>“Super smooth tweening, clean transitions, very polished.”</p>
+             REVIEW TEMPLATE 1 
+            <div class="review-card full-review">
+                <div class="review-header">
+                    <img src="images/pfp1.png" class="review-pfp">
+                    <h3></h3>
                 </div>
+                <p></p>
+            </div>
 
-                <div class="review-card fade-in">
-                    <h3>Client</h3>
-                    <p>“Made my systems feel way more responsive.”</p>
+             REVIEW TEMPLATE 2 
+            <div class="review-card full-review">
+                <div class="review-header">
+                    <img src="images/pfp2.png" class="review-pfp">
+                    <h3></h3>
                 </div>
+                <p></p>
+            </div>
 
-                <div class="review-card fade-in">
-                    <h3>Client</h3>
-                    <p>“Fast, clean, and really good at polish.”</p>
+             REVIEW TEMPLATE 3 
+            <div class="review-card full-review">
+                <div class="review-header">
+                    <img src="images/pfp3.png" class="review-pfp">
+                    <h3></h3>
                 </div>
+                <p></p>
+            </div>
 
+             REVIEW TEMPLATE 4 
+            <div class="review-card full-review">
+                <div class="review-header">
+                    <img src="images/pfp4.png" class="review-pfp">
+                    <h3></h3>
+                </div>
+                <p></p>
+            </div>
+
+             REVIEW TEMPLATE 5 
+            <div class="review-card full-review">
+                <div class="review-header">
+                    <img src="images/pfp5.png" class="review-pfp">
+                    <h3></h3>
+                </div>
+                <p></p>
+            </div>
+
+            REVIEW TEMPLATE 6 
+            <div class="review-card full-review">
+                <div class="review-header">
+                    <img src="images/pfp6.png" class="review-pfp">
+                    <h3></h3>
+                </div>
+                <p></p>
             </div>
         </div>
-    </section>
-
+    </div>
+    </section> 
+-->
     <!-- CONTACT -->
-    <section id="contact" class="section contact-section fade-in">
-        <div class="container">
-            <h2>Contact Me</h2>
+    <section id="contact" class="section fade-in">
+        <h2>Contact Me</h2>
+        <p class="section-text">Reach out to me instantly via Discord.</p>
 
-            <p class="contact-line">
-                Discord: <span>itsillusion1123</span>
-            </p>
-        </div>
+        <a href="https://discord.com/users/760340735123259402" 
+        target="_blank"
+        class="terminal-card">
+
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">discord-terminal.exe</span>
+            </div>
+
+            <div class="terminal-body">
+                <div class="glitch-text" data-text="Connecting to ItsIllusion...">
+                    Connecting to ItsIllusion...
+                </div>
+
+                <div class="discord-line">
+                    <img src="images/discord.png" class="discord-icon">
+                    <span class="discord-user">@itsillusion1123</span>
+                </div>
+
+                <div class="scanline"></div>
+                <div class="static"></div>
+            </div>
+
+        </a>
     </section>
+
+
 
     <!-- FOOTER -->
     <footer class="footer">

@@ -200,37 +200,137 @@ h2 {
 }
 
 /* =========================================================
-   ABOUT INFO CARDS
+   ABOUT SECTION — UPGRADED
    ========================================================= */
 
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+#about-illusion {
+    position: relative;
+    overflow: visible;
 }
 
-.info-card {
-    background: #101018;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #222234;
-    transition: 0.3s;
+/* Centered spotlight glow */
+#about-illusion::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(139,197,255,0.38), transparent 70%);
+    filter: blur(40px);
+    opacity: 0.75;
+    z-index: -1;
+    pointer-events: none;
 }
 
-.info-card:hover {
-    transform: translateY(-5px);
-    border-color: #8BC5FF;
+#about-illusion .floating-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(139,197,255,0.25);
+    border-radius: 50%;
+    filter: blur(4px);
+    animation: drift 8s infinite ease-in-out;
 }
 
-.info-card h3 {
-    margin-bottom: 10px;
+@keyframes drift {
+    0% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+    50% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+    100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
 }
 
-.info-card p {
-    font-size: 14px;
+
+/* Title glow pulse */
+.about-title {
+    font-size: 42px;
+    text-shadow: 0 0 18px rgba(139,197,255,0.55);
+    animation: titlePulse 4s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+    0% { text-shadow: 0 0 18px rgba(139,197,255,0.5); }
+    50% { text-shadow: 0 0 28px rgba(139,197,255,0.9); }
+    100% { text-shadow: 0 0 18px rgba(139,197,255,0.5); }
+}
+
+/* Subtitle */
+.about-subtext {
+    max-width: 750px;
+    margin: 10px auto 45px;
+    font-size: 16px;
     color: #c3c3d5;
 }
+
+/* Card grid */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+/* Card styling with glow ripple */
+.about-card {
+    background: rgba(16, 16, 24, 0.78);
+    border: 1px solid #222234;
+    padding: 28px;
+    border-radius: 16px;
+    transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.35);
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: #8BC5FF;
+    box-shadow:
+        0 0 28px rgba(139,197,255,0.45),
+        inset 0 0 35px rgba(0,0,0,0.5);
+}
+
+/* Ripple highlight on hover */
+.about-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(139,197,255,0.18), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.about-card:hover::after {
+    opacity: 1;
+}
+
+/* Icon animation */
+.about-icon {
+    font-size: 30px;
+    color: #8BC5FF;
+    margin-bottom: 12px;
+    text-shadow: 0 0 12px rgba(139,197,255,0.6);
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* Text inside card */
+.about-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-card p {
+    color: #c3c3d5;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
 
 /* =========================================================
    PROJECTS GALLERY
@@ -272,74 +372,268 @@ h2 {
 }
 
 /* =========================================================
-   FEATURED SYSTEMS
+   FEATURED SYSTEMS — TERMINAL STYLE
    ========================================================= */
 
-.systems-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-}
-
-.system-card {
+/* Carousel Item Container */
+.carousel-item {
     background: #101018;
     border: 1px solid #222234;
-    padding: 20px;
     border-radius: 12px;
-    transition: 0.3s;
+    padding: 0;
+    overflow: hidden;
+    flex: 0 0 auto;
+    width: 260px; /* keep small carousel card size */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.system-card:hover {
-    transform: translateY(-7px);
+.carousel-item:hover {
+    transform: translateY(-6px);
     border-color: #8BC5FF;
-}
-
-.system-card h3 {
-    margin-bottom: 10px;
-}
-
-.system-card p {
-    font-size: 14px;
-    color: #c3c3d5;
+    box-shadow: 0 0 22px rgba(139,197,255,0.25);
 }
 
 /* =========================================================
-   PRICING CARDS
+   TERMINAL BAR (Top Header)
    ========================================================= */
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+.small-terminal {
+    height: 28px;
+    background: #1a1a22;
+    border-bottom: 1px solid #252533;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.pricing-card {
-    background: #101018;
-    border: 1px solid #222234;
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
+.small-terminal .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
 }
 
-.pricing-card:hover {
-    transform: translateY(-7px);
-    border-color: #8BC5FF;
+.small-terminal .dot.red { background: #ff5f56; }
+.small-terminal .dot.yellow { background: #ffbd2e; }
+.small-terminal .dot.green { background: #27c93f; }
+
+.small-terminal .terminal-title {
+    margin-left: auto;
+    font-size: 12px;
+    color: #7FAEEB;
+    opacity: 0.85;
 }
 
-.price {
-    font-size: 20px;
+/* =========================================================
+   SYSTEM VIDEO (Square + Cropped)
+   ========================================================= */
+
+.carousel-item video {
+    width: 100%;
+    height: 160px;      /* square-ish */
+    object-fit: cover;
+    border-bottom: 1px solid #222234;
+    margin-top: 0;
+    display: block;
+    border-radius: 0;
+}
+
+/* =========================================================
+   SYSTEM TITLE & DESCRIPTION
+   ========================================================= */
+
+.carousel-item h3 {
+    margin: 12px;
+    margin-bottom: 5px;
     color: #8BC5FF;
+    font-size: 15px;
+}
+
+.carousel-item p {
+    margin: 0 12px 12px;
+    font-size: 13px;
+    color: #c3c3d5;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   SCANLINE EFFECT ON HOVER (Optional but clean)
+   ========================================================= */
+
+.carousel-item:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        rgba(139,197,255,0.05),
+        rgba(139,197,255,0.12),
+        rgba(139,197,255,0.05)
+    );
+    animation: systemScan 2.4s linear infinite;
+}
+
+@keyframes systemScan {
+    0% { background-position: 0 -120px; }
+    100% { background-position: 0 200px; }
+}
+
+
+/* =========================================================
+   TERMINAL-STYLE PRICING
+   ========================================================= */
+
+.pricing-terminal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+}
+
+/* Terminal container */
+.pricing-terminal {
+    background: #0B0E14;
+    border-radius: 14px;
+    border: 1px solid #1a1f2b;
+    overflow: hidden;
+    box-shadow:
+        0 0 22px rgba(139,197,255,0.15),
+        inset 0 0 18px rgba(0,0,0,0.6);
+    transition: 0.25s ease;
+    position: relative;
+}
+
+.pricing-terminal:hover {
+    transform: translateY(-6px);
+    border-color: #8BC5FF;
+    box-shadow:
+        0 0 35px rgba(139,197,255,0.35),
+        inset 0 0 25px rgba(0,0,0,0.75);
+}
+
+/* Top bar */
+.terminal-bar {
+    background: #11141C;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #1b2230;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    opacity: 0.7;
+    font-size: 13px;
+}
+
+/* Content */
+.terminal-content {
+    padding: 22px;
+}
+
+/* Titles */
+.plan-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+/* Prices */
+.plan-price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #8BC5FF;
+    text-shadow: 0 0 15px rgba(139,197,255,0.5);
     margin-bottom: 10px;
 }
 
-.pricing-card ul {
+/* Separator */
+.terminal-sep {
+    width: 100%;
+    height: 1px;
+    background: rgba(139,197,255,0.25);
+    margin: 12px 0;
+}
+
+/* Description */
+.plan-desc {
+    color: #c3c3d5;
+    margin-bottom: 14px;
+    line-height: 1.45;
+}
+
+/* List */
+.plan-list {
     padding-left: 20px;
 }
 
-.pricing-card ul li {
-    color: #c3c3d5;
-    margin-bottom: 5px;
+.plan-list li {
+    margin-bottom: 6px;
+    color: #d0d0e0;
     font-size: 14px;
+}
+
+/* Highlighted Plan */
+.pricing-terminal.highlighted {
+    border-color: #8BC5FF;
+    box-shadow:
+        0 0 40px rgba(139,197,255,0.4),
+        inset 0 0 25px rgba(0,0,0,0.7);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #8BC5FF;
+    color: #050509;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Scanline overlay for pricing cards */
+.pricing-terminal::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(
+        rgba(139,197,255,0.06),
+        rgba(139,197,255,0.15),
+        rgba(139,197,255,0.06)
+    );
+    opacity: 0;
+    pointer-events: none;
+    animation: none;
+}
+
+.pricing-terminal:hover::after {
+    opacity: 1;
+    animation: pricingScan 2.2s linear infinite;
+}
+
+@keyframes pricingScan {
+    0% { top: -120px; }
+    100% { top: 100%; }
 }
 
 /* =========================================================
@@ -361,30 +655,84 @@ h2 {
 }
 
 /* =========================================================
-   REVIEWS
+   LOOPING REVIEW CAROUSEL — CLEAN VERSION
    ========================================================= */
 
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+.review-carousel {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
 }
 
-.review-card {
+.review-track {
+    display: flex;
+    gap: 25px;
+    animation: scrollLoop 25s linear infinite;
+}
+
+.review-track .full-review {
+    min-width: 300px;
+}
+
+/* Smooth infinite scroll animation */
+@keyframes scrollLoop {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =========================================================
+   REVIEW CARD STYLE (MATCHED TO YOUR THEME)
+   ========================================================= */
+
+.full-review {
     background: #101018;
     border: 1px solid #222234;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 22px;
+    border-radius: 18px;
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.25);
 }
 
-.review-card h3 {
-    margin-bottom: 10px;
+.full-review:hover {
+    transform: translateY(-8px);
+    border-color: #8BC5FF;
+    box-shadow:
+        0 0 18px rgba(139,197,255,0.25),
+        inset 0 0 15px rgba(0,0,0,0.4);
 }
 
-.review-card p {
+/* Header: pfp + username */
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.review-pfp {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #8BC5FF;
+    box-shadow: 0 0 10px rgba(139,197,255,0.35);
+}
+
+.full-review h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+/* Review message */
+.full-review p {
+    margin-top: 8px;
     font-size: 14px;
     color: #c3c3d5;
+    line-height: 1.55;
 }
+
+
 
 /* =========================================================
    CONTACT SECTION
@@ -608,80 +956,353 @@ h2 {
 }
 
 /* =========================================================
-   CLEAN PUBLISHED GAMES — UI, FX, PARALLAX, BORDERS
+   TERMINAL-STYLED GAME CARDS (FIXED VERSION)
    ========================================================= */
 
-.games-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
+/* Fix card width — rectangle shape */
+.game-card {
+    width: 300px;         /* not too wide */
+    min-height: 420px;    /* makes it taller */
+    background: #101018;
+    border: 1px solid #222234;
+    border-radius: 14px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
 }
 
-.game-card {
-    position: relative;
-    background: #101018;
-    border-radius: 14px;
-    padding: 20px;
+.terminal-game {
+    background: #0b0b12;
+    border: 1px solid #1f1f2a;
+    border-radius: 12px;
+    padding: 0;
     overflow: hidden;
-    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
     transition: transform 0.25s ease;
 }
 
-/* Animated gradient border */
-.game-border {
-    position: absolute;
-    inset: 0;
-    border-radius: 14px;
-    padding: 2px;
-    background: linear-gradient(130deg, #8BC5FF, #AA7334, #8BC5FF);
-    background-size: 300% 300%;
-    animation: borderMove 5s ease infinite;
-    z-index: -1;
+.terminal-game:hover {
+    transform: translateY(-6px);
 }
 
-@keyframes borderMove {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+/* Terminal bar */
+.terminal-bar {
+    background: #1a1a25;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-bottom: 1px solid #2b2b3a;
+    height: 35px;
 }
 
-/* Thumbnail hover animation */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    font-size: 13px;
+    color: #7a7a92;
+    opacity: 0.9;
+}
+
+/* Published games grid */
+.games-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Thumbnail frame height */
+.game-thumb-frame {
+    height: 200px;  /* adjust height here */
+    overflow: hidden;
+    border-bottom: 1px solid #222234;
+}
+
 .game-thumb {
     width: 100%;
-    border-radius: 12px;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    height: 100%;
+    object-fit: cover;
 }
 
-.game-card:hover .game-thumb {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-/* Parallax tilt */
-.tilt {
-    transform-style: preserve-3d;
-    transition: transform 0.25s ease;
-}
-
-.tilt:hover {
-    transform: rotateY(7deg) rotateX(7deg) scale(1.03);
-}
-
-/* Play button */
-.play-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 15px;
-    margin-top: 10px;
-    border: 1px solid #8BC5FF;
+/* Game info */
+.terminal-game h3 {
+    margin: 15px;
     color: #8BC5FF;
+    font-size: 17px;
+}
+
+.play-btn {
+    margin: 0 15px 15px;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #8BC5FF;
     border-radius: 8px;
-    transition: 0.3s ease;
+    color: #8BC5FF;
+    transition: 0.2s;
 }
 
 .play-btn:hover {
     background: #8BC5FF;
     color: #050509;
-    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   GLITCH TERMINAL CONTACT PANEL
+   ========================================================= */
+
+.terminal-card {
+    width: 550px;
+    margin: 40px auto;
+    background: #0B0E14;
+    border-radius: 12px;
+    border: 1px solid #1a1f2b;
+    box-shadow:
+        0 0 20px rgba(139,197,255,0.15),
+        inset 0 0 15px rgba(0,0,0,0.6);
+    padding-bottom: 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+.terminal-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: #8BC5FF;
+    box-shadow:
+        0 0 30px rgba(139,197,255,0.35),
+        inset 0 0 25px rgba(0,0,0,0.8);
+}
+
+/* Top bar dots */
+.terminal-header {
+    background: #11141C;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #1b2230;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    opacity: 0.7;
+    font-size: 13px;
+}
+
+/* Glitch text */
+.glitch-text {
+    position: relative;
+    margin: 25px 20px 10px;
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    color: #8BC5FF;
+    animation: glitch 2s infinite;
+}
+
+/* Glitch effect layers */
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+}
+
+.glitch-text::before {
+    color: rgba(255,0,0,0.7);
+    animation: glitchBefore 2s infinite;
+}
+
+.glitch-text::after {
+    color: rgba(0,255,255,0.7);
+    animation: glitchAfter 2s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: none; }
+    20% { transform: skew(-3deg); }
+    40% { transform: translateX(3px); }
+    60% { transform: skew(2deg); }
+    80% { transform: translateX(-2px); }
+    100% { transform: none; }
+}
+
+@keyframes glitchBefore {
+    0% { left: -2px; }
+    50% { left: 2px; }
+    100% { left: -2px; }
+}
+
+@keyframes glitchAfter {
+    0% { left: 2px; }
+    50% { left: -2px; }
+    100% { left: 2px; }
+}
+
+/* Discord line */
+.discord-line {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.discord-icon {
+    width: 35px;
+    margin-right: 12px;
+    filter: drop-shadow(0 0 6px rgba(139,197,255,0.7));
+}
+
+.discord-user {
+    font-family: "Courier New", monospace;
+    color: #d0d8f7;
+}
+
+/* Scanline overlay */
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(139,197,255,0.2);
+    animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+    0% { top: -3px; }
+    100% { top: 100%; }
+}
+
+/* Static noise */
+.static {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/static.gif');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* =========================================================
+   🔵 FULL CRT TERMINAL EFFECT PACK
+   ========================================================= */
+
+/* Container to apply CRT distortion */
+.carousel-item video {
+    position: relative;
+    filter: contrast(1.15) brightness(0.92) saturate(1.1);
+    transform: translateZ(0);
+    image-rendering: pixelated;
+}
+
+/* Glow + RGB shift on hover */
+.carousel-item:hover video {
+    filter:
+        contrast(1.2)
+        brightness(1)
+        saturate(1.25)
+        drop-shadow(0 0 8px rgba(139,197,255,0.4));
+}
+
+/* CRT scanlines */
+.carousel-item video::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 1px,
+        rgba(0, 0, 0, 0.08) 2px
+    );
+    mix-blend-mode: overlay;
+    animation: crtScan 6s linear infinite;
+}
+
+@keyframes crtScan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 240px; }
+}
+
+/* Chromatic aberration */
+.carousel-item video {
+    --r: 0px;
+    --g: 0px;
+    --b: 0px;
+}
+
+.carousel-item:hover video {
+    animation: crtRGB 0.15s steps(2) infinite;
+}
+
+@keyframes crtRGB {
+    0% { filter: drop-shadow(1px 0 1px #ff0000) drop-shadow(-1px 0 1px #00ffff); }
+    50% { filter: drop-shadow(-1px 0 1px #ff0000) drop-shadow(1px 0 1px #00ffff); }
+    100% { filter: drop-shadow(1px 0 1px #ff0000) drop-shadow(-1px 0 1px #00ffff); }
+}
+
+/* Curved CRT glass effect */
+.carousel-item video {
+    mask-image: radial-gradient(circle at center, white 60%, transparent 100%);
+    border-radius: 10px;
+}
+
+/* Flicker */
+.carousel-item:hover video {
+    animation: crtFlicker 0.12s infinite alternate;
+}
+
+@keyframes crtFlicker {
+    0% { opacity: 0.96; }
+    100% { opacity: 1; }
+}
+
+/* Ghost trail (motion persistence) */
+.carousel-item video {
+    mix-blend-mode: lighten;
+}
+
+/* Static Noise Layer */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("https://www.transparenttextures.com/patterns/white-noise.png");
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+    animation: staticMove 0.2s infinite;
+}
+
+@keyframes staticMove {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(2px, -1px); }
+    100% { transform: translate(-1px, 1px); }
 }

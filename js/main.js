@@ -257,3 +257,77 @@ expandedVideo.addEventListener("touchend", e => {
     }
 });
 
+/* ===========================
+   AUTO LOOP REVIEW CARDS
+   =========================== */
+
+const track1 = document.querySelector('.review-track');
+if (track1) {
+    const cards = Array.from(track1.children).filter(c => !c.classList.contains("clone"));
+
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        track1.appendChild(clone);
+    });
+}
+
+/* =======================================================
+   FEATURED SYSTEM TERMINAL CARDS — MODAL PLAYBACK
+   ======================================================= */
+
+const sysCards = document.querySelectorAll(".system-terminal");
+
+if (sysCards.length > 0) {
+    sysCards.forEach((card, index) => {
+        const file = card.getAttribute("data-video");
+        const title = card.getAttribute("data-title");
+
+        card.addEventListener("click", () => {
+            autoScroll = false; // stop carousel autoplay if active
+
+            expandedVideo.src = file;
+            modalTitle.textContent = title;
+            modalDesc.textContent = ""; // optional: systems don’t need a desc
+
+            modal.style.display = "flex";
+            requestAnimationFrame(() => modal.classList.add("active"));
+
+            expandedVideo.play();
+        });
+    });
+}
+
+/* =======================================================
+   FEATURED SYSTEM VIDEO FRAMES — HOVER PREVIEW + SHRINK
+   ======================================================= */
+
+document.querySelectorAll(".system-terminal .video-frame video").forEach(v => {
+    v.style.maxHeight = "170px";     // SHRINKED SIZE
+    v.style.objectFit = "cover";
+
+    v.addEventListener("mouseenter", () => {
+        v.play();
+    });
+
+    v.addEventListener("mouseleave", () => {
+        v.pause();
+        v.currentTime = 0;
+    });
+});
+
+/* =======================================================
+   SYSTEM VIDEO SCANLINE (AUTO ANIMATION READY)
+   ======================================================= */
+
+document.querySelectorAll(".video-scanline").forEach(sl => {
+    sl.style.animation = "videoScan 3s linear infinite";
+});
+
+/* CRT Boot Flash */
+window.addEventListener("load", () => {
+    document.querySelectorAll(".carousel-item video").forEach(v => {
+        v.style.opacity = "0";
+        setTimeout(() => v.style.transition = "opacity 0.4s", 10);
+        setTimeout(() => v.style.opacity = "1", 80);
+    });
+});
