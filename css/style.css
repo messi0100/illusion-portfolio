@@ -608,7 +608,7 @@ h2 {
 }
 
 /* =========================================================
-   PUBLISHED GAMES — UI, FX, PARALLAX, BORDER, BUTTON FX
+   CLEAN PUBLISHED GAMES — UI, FX, PARALLAX, BORDERS
    ========================================================= */
 
 .games-grid {
@@ -624,6 +624,7 @@ h2 {
     border-radius: 14px;
     padding: 20px;
     overflow: hidden;
+    text-align: center;
     transition: transform 0.25s ease;
 }
 
@@ -635,29 +636,29 @@ h2 {
     padding: 2px;
     background: linear-gradient(130deg, #8BC5FF, #AA7334, #8BC5FF);
     background-size: 300% 300%;
-    animation: borderMove 4s ease infinite;
+    animation: borderMove 5s ease infinite;
     z-index: -1;
 }
 
 @keyframes borderMove {
-    0% { background-position: 0 0; }
+    0% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
-    100% { background-position: 0 0; }
+    100% { background-position: 0% 0%; }
 }
 
 /* Thumbnail hover animation */
 .game-thumb {
     width: 100%;
     border-radius: 12px;
-    transition: transform 0.3s, filter 0.3s;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .game-card:hover .game-thumb {
     transform: scale(1.05);
-    filter: brightness(1.12);
+    filter: brightness(1.1);
 }
 
-/* Parallax tilt effect */
+/* Parallax tilt */
 .tilt {
     transform-style: preserve-3d;
     transition: transform 0.25s ease;
@@ -667,47 +668,12 @@ h2 {
     transform: rotateY(7deg) rotateX(7deg) scale(1.03);
 }
 
-/* Stats */
-.game-stats {
-    margin: 10px 0 15px;
-}
-
-.stat {
-    font-size: 14px;
-    color: #c3c3d5;
-    margin-bottom: 6px;
-}
-
-/* Clean Like Ratio */
-.ratio-text {
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    color: #8BC5FF;
-    margin-bottom: 6px;
-}
-
-/* Like bar */
-.likebar {
-    width: 100%;
-    height: 6px;
-    background: #333;
-    border-radius: 10px;
-}
-
-.like-fill {
-    height: 6px;
-    width: 0%;
-    background: #8BC5FF;
-    border-radius: 10px;
-    transition: width 0.5s ease;
-}
-
 /* Play button */
 .play-btn {
     display: inline-block;
     padding: 10px 20px;
     font-size: 15px;
+    margin-top: 10px;
     border: 1px solid #8BC5FF;
     color: #8BC5FF;
     border-radius: 8px;
