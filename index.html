@@ -6,7 +6,8 @@
     <title>ItsIllusion - Roblox Developer</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2'family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2'family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
@@ -30,13 +31,11 @@
 
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
+                <a href="#about-illusion">About</a>
                 <a href="#systems">Systems</a>
                 <a href="#pricing">Pricing</a>
                 <!-- <a href="#reviews">Reviews</a> -->
                 <a href="#contact">Contact</a>
-
-                <button id="themeToggle">🌙</button>
             </div>
         </div>
     </nav>
@@ -44,8 +43,8 @@
     <!-- HERO -->
     <section id="home" class="section hero fade-in">
         <div class="container hero-content">
-            <h1><span>Its</span>Illusion</h1>
-            <p class="hero-role">Roblox Systems Developer – Tweening & Smooth Gameplay</p>
+            <h1 class="type-on-scroll"><span>Its</span>Illusion</h1>
+            <p class="hero-role type-on-scroll">Roblox Systems Developer - Tweening & Smooth Gameplay</p>
 
             <p class="hero-text">
                 I specialize in tweening, transitions, and polished game-feel.  
@@ -63,7 +62,7 @@
     <!-- ABOUT -->
     <section id="about-illusion" class="section fade-in">
         <div class="about-header">
-            <h2 class="about-title">Who’s ItsIllusion?</h2>
+            <h2 class="about-title type-on-scroll">Who's ItsIllusion?</h2>
             <p class="about-subtext">
                 I'm a 14-year-old Roblox developer focused on polished gameplay, smooth tweening,
                 clean transitions, and responsive interactions.
@@ -77,29 +76,51 @@
         <div class="about-cards">
 
             <div class="about-card tilt">
-                <div class="about-icon">⚡</div>
+                <div class="about-icon">*</div>
                 <h3>Experience</h3>
                 <p>Years of Roblox scripting across multiple genres.</p>
             </div>
 
             <div class="about-card tilt">
-                <div class="about-icon">🎨</div>
+                <div class="about-icon">*</div>
                 <h3>Tweening</h3>
                 <p>Transitions, easing, buttons, menus, responsiveness.</p>
             </div>
 
             <div class="about-card tilt">
-                <div class="about-icon">🛠️</div>
+                <div class="about-icon">*</div>
                 <h3>Systems</h3>
                 <p>Combat, camera systems, chassis, tools, data.</p>
             </div>
 
             <div class="about-card tilt">
-                <div class="about-icon">🚀</div>
+                <div class="about-icon">*</div>
                 <h3>Performance</h3>
                 <p>Clean, optimized, scalable architecture.</p>
             </div>
 
+        </div>
+
+        <div class="terminal-card info-card">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">about.txt</span>
+            </div>
+            <div class="terminal-body">
+                <p class="info-line">$ timezone: PST</p>
+                <p class="info-line">$ age: 14</p>
+                <p class="info-line">$ experience: 5 years scripting systems and core game mechanics</p>
+                <p class="info-line">$ strong_suites:</p>
+                <ul class="info-list">
+                    <li>Combat systems</li>
+                    <li>Custom movement & camera systems</li>
+                    <li>VFX handling and polish</li>
+                    <li>UI tweening & smoothing</li>
+                    <li>Core systems for RPGs, battlegrounds, simulators, TD</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -116,7 +137,7 @@
         <div class="carousel-container">
 
             <!-- Left Arrow -->
-            <button class="carousel-btn left-btn">‹</button>
+            <button class="carousel-btn left-btn"><</button>
 
             <!-- Carousel Track -->
             <div class="carousel-track">
@@ -180,17 +201,43 @@
             </div>
 
             <!-- Right Arrow -->
-            <button class="carousel-btn right-btn">›</button>
+            <button class="carousel-btn right-btn">></button>
 
         </div>
     </div>
 </section>
 
+    <section id="case-study" class="section fade-in">
+        <div class="container">
+            <h2>Case Study</h2>
+            <p class="section-text">One focused example of the systems work I deliver.</p>
 
-  <section id="games" class="section fade-in">
+            <div class="terminal-card case-card">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">rpg-combat.log</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="info-line">$ project: Action RPG combat + camera</p>
+                    <p class="info-line">$ role: Systems designer & scripter</p>
+                    <p class="info-line">$ challenge: Jittery camera, slow hit confirm, laggy VFX.</p>
+                    <p class="info-line">$ solution:</p>
+                    <ul class="info-list">
+                        <li>Built tweened camera rigs with smoothing and offset locks.</li>
+                        <li>Combat state machine with buffered inputs and fast hit feedback.</li>
+                        <li>Optimized VFX pooling to keep FPS stable during bursts.</li>
+                    </ul>
+                    <p class="info-line">$ outcome: Noticeable smoothness gains, responsive hits, and stable frames under load.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="games" class="section fade-in">
         <div class="container">
             <h2>Published Games</h2>
-            <p class="section-text">Games I’ve developed and released on Roblox.</p>
+            <p class="section-text">Games I've developed and released on Roblox.</p>
 
             <div class="games-grid">
 
@@ -269,7 +316,7 @@
                 <div class="terminal-content">
 
                     <h3 class="plan-title">Starter</h3>
-                    <div class="plan-price">$10–15</div>
+                    <div class="plan-price">$10-15</div>
 
                     <div class="terminal-sep"></div>
 
@@ -281,6 +328,10 @@
                         <li>Basic optimization</li>
                         <li>Quick delivery</li>
                     </ul>
+
+                    <div class="plan-actions">
+                        <a href="#contact" class="btn primary order-btn">Order Now</a>
+                    </div>
 
                     <!-- Particle lights -->
                     <span class="particle" style="top: 20px; left: 18px;"></span>
@@ -304,7 +355,7 @@
                     <div class="featured-badge">MOST POPULAR</div>
 
                     <h3 class="plan-title">Standard</h3>
-                    <div class="plan-price">$20–30</div>
+                    <div class="plan-price">$20-30</div>
 
                     <div class="terminal-sep"></div>
 
@@ -316,6 +367,10 @@
                         <li>Movement additions</li>
                         <li>Medium-scope scripting</li>
                     </ul>
+
+                    <div class="plan-actions">
+                        <a href="#contact" class="btn primary order-btn">Order Now</a>
+                    </div>
 
                     <!-- Particle lights -->
                     <span class="particle" style="top: 20px; left: 18px;"></span>
@@ -337,7 +392,7 @@
                 <div class="terminal-content">
 
                     <h3 class="plan-title">Premium</h3>
-                    <div class="plan-price">$35–50+</div>
+                    <div class="plan-price">$100+</div>
 
                     <div class="terminal-sep"></div>
 
@@ -349,6 +404,10 @@
                         <li>Advanced menus</li>
                         <li>High-end responsiveness</li>
                     </ul>
+
+                    <div class="plan-actions">
+                        <a href="#contact" class="btn primary order-btn">Order Now</a>
+                    </div>
 
                     <!-- Particle lights -->
                     <span class="particle" style="top: 20px; left: 18px;"></span>
@@ -461,7 +520,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2025 ItsIllusion — All Rights Reserved</p>
+        <p>(c) 2025 ItsIllusion - All Rights Reserved</p>
 
         <div class="footer-socials">
             <a href="#">Discord</a>
@@ -481,8 +540,8 @@
         </div>
 
         <!-- Modal Navigation -->
-        <button class="modal-arrow modal-prev">‹</button>
-        <button class="modal-arrow modal-next">›</button>
+        <button class="modal-arrow modal-prev"><</button>
+        <button class="modal-arrow modal-next">></button>
     </div>
 </div>
 
