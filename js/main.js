@@ -13,7 +13,14 @@ window.addEventListener("load", () => {
 const container = document.getElementById("bg-particles");
 
 const PARTICLE_COUNT = 80;
-const colors = ["rgba(139, 197, 255, 0.35)", "rgba(209, 138, 66, 0.35)"];
+const colors = [
+    "rgba(0, 255, 0, 0.35)",    // Bright green
+    "rgba(255, 255, 0, 0.35)",  // Yellow
+    "rgba(255, 102, 0, 0.35)",  // Orange
+    "rgba(153, 0, 255, 0.35)",  // Purple
+    "rgba(255, 0, 153, 0.35)",  // Pink
+    "rgba(0, 255, 255, 0.35)"   // Cyan
+];
 
 for (let i = 0; i < PARTICLE_COUNT; i++) {
     const p = document.createElement("div");
