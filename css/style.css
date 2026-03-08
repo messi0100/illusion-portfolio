@@ -1882,12 +1882,8 @@ h2::before {
     box-shadow: 0 12px 25px rgba(0,0,0,0.35), 0 8px 22px rgba(209, 138, 66, 0.28);
 }
 
-/* =========================================================
-   VIRTUALREZ-INSPIRED MINIMAL THEME
-   ========================================================= */
-
 :root {
-    --vz-bg: #000;
+    --vz-bg: #0d1117;
     --vz-surface: rgba(255, 255, 255, 0.05);
     --vz-border: rgba(255, 255, 255, 0.12);
     --vz-border-strong: rgba(255, 255, 255, 0.2);
@@ -1898,7 +1894,10 @@ h2::before {
 
 body {
     font-family: 'Inter', 'DM Mono', monospace;
-    background: var(--vz-bg);
+    background:
+        radial-gradient(circle at top left, rgba(139, 197, 255, 0.08), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.05), transparent 30%),
+        linear-gradient(135deg, #0f1722 0%, #111827 45%, #1b2636 100%);
     color: var(--vz-text);
     text-shadow: none;
     line-height: 1.7;
@@ -1971,12 +1970,13 @@ body::after {
 }
 
 .section {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--vz-border);
     border-radius: 18px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.35);
     padding: 110px 0;
     margin-bottom: 60px;
+    backdrop-filter: blur(10px);
 }
 
 .section::before {
