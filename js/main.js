@@ -15,11 +15,11 @@ const container = document.getElementById("bg-particles");
 const PARTICLE_COUNT = 80;
 const colors = [
     "rgba(0, 255, 0, 0.35)",    // Bright green
-    "rgba(255, 255, 0, 0.35)",  // Yellow
-    "rgba(255, 102, 0, 0.35)",  // Orange
-    "rgba(153, 0, 255, 0.35)",  // Purple
-    "rgba(255, 0, 153, 0.35)",  // Pink
-    "rgba(0, 255, 255, 0.35)"   // Cyan
+    "rgba(0, 200, 0, 0.35)",    // Darker green
+    "rgba(0, 150, 0, 0.35)",    // Even darker green
+    "rgba(0, 255, 0, 0.25)",    // Bright green with lower opacity
+    "rgba(0, 180, 0, 0.30)",    // Medium green
+    "rgba(0, 220, 0, 0.40)"     // Light green
 ];
 
 for (let i = 0; i < PARTICLE_COUNT; i++) {
