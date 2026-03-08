@@ -108,6 +108,20 @@ body {
     margin-left: 20px;
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
 /* =========================================================
    SECTIONS
    ========================================================= */
@@ -911,6 +925,26 @@ h2 {
 
 /* Small phones */
 @media (max-width: 480px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 5, 9, 0.95);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
     .hero-content h1 {
         font-size: 1.8rem;
     }
