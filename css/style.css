@@ -60,6 +60,11 @@ body {
     100% { transform: translate3d(0px, 0px, 0); opacity: 0.1; }
 }
 
+@keyframes matrixRain {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+}
+
 /* =========================================================
    NAVBAR
    ========================================================= */
@@ -1499,6 +1504,7 @@ body::after {
     pointer-events: none;
     z-index: -1;
 }
+
 
 /* Subtle tilt-ready surfaces */
 .tilt,
